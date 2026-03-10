@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+canvas#aurora {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+canvas#particles {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    user-select: none;
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 9rem);
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #fff;
+    text-shadow:
+        0 0 40px rgba(120, 80, 255, 0.8),
+        0 0 80px rgba(80, 200, 255, 0.4);
+    animation: float 4s ease-in-out infinite;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+h1.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub {
+    margin-top: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 100;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
+}
+
+.sub.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-14px); }
+}
