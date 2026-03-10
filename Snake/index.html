@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Snake II</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="phone-top">
+      <div class="earpiece"></div>
+    </div>
+    <div class="screen-bezel">
+      <div class="screen-label">NOKIA</div>
+      <div class="screen">
+        <div class="status-bar">
+          <span class="status-left">Score: <span id="score">0</span></span>
+          <span class="status-right">Hi: <span id="highscore">0</span></span>
+        </div>
+        <canvas id="game" width="280" height="280"></canvas>
+        <div id="overlay" class="overlay">
+          <div id="overlay-title" class="overlay-title">SNAKE II</div>
+          <div id="overlay-msg" class="overlay-msg">Press any key to start</div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="dpad">
+        <button class="dpad-btn dpad-up" id="btn-up" aria-label="Up"></button>
+        <button class="dpad-btn dpad-left" id="btn-left" aria-label="Left"></button>
+        <div class="dpad-center"></div>
+        <button class="dpad-btn dpad-right" id="btn-right" aria-label="Right"></button>
+        <button class="dpad-btn dpad-down" id="btn-down" aria-label="Down"></button>
+      </div>
+    </div>
+    <div class="phone-bottom">
+      <div class="mic-holes">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
